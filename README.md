@@ -121,7 +121,7 @@ def model_final(input_shape, output_sequence_length, english_vocab_size, french_
 
 ## Author
 
-- **Musa Qureshi**
+## **Musa Qureshi**
 - [**Github**](https://github.com/Musa-Qureshi-01)
 - [**LinkedIn**](https://www.linkedin.com/in/musaqureshi)
 - [**X (Twitter)**](https://x.com/Musa_Qureshi_01)
