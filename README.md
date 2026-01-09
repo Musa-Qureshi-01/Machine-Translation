@@ -37,42 +37,44 @@ This project requires **Python 3** and the following Python libraries installed:
 ## Notebook Explanation
 The notebook included in this repository is very detailed and covers:
 
-### Data Cleaning & Preprocessing
-- Lowercasing text
-- Removing punctuation
-- Tokenization for English & French
-- Creating word-to-index and index-to-word mappings
-- Padding sequences
+1. Data Cleaning & Preprocessing
+     - Lowercasing text
+     - Removing punctuation
+     - Tokenization for English & French
+     - Creating word-to-index and index-to-word mappings
+     - Padding sequences
 
-### Vocabulary Construction
-- Counting unique words
-- Building integer encodings
-- Preparing input/output pairs
+2. Vocabulary Construction
+     - Counting unique words
+     - Building integer encodings
+     - Preparing input/output pairs
 
-### Model Development
-- Explanation of embedding-based Seq2Seq
-- Why Bidirectional LSTMs are used
-- Visualization of sequence flow
-- Step-by-step model summary
+3. Model Development
+     - Explanation of embedding-based Seq2Seq
+     - Why Bidirectional LSTMs are used
+     - Visualization of sequence flow
+     - Step-by-step model summary
 
-### Training & Evaluation
-- Loss curves
-- Accuracy curves
-- Sample translations
-- Error analysis
+4. Training & Evaluation
+     - Loss curves
+     - Accuracy curves
+     - Sample translations
+     - Error analysis
 
-### Inference Pipeline
+5. Inference Pipeline
+     - Preparing a new English text
+     - Encoding input
+     - Model prediction
+     - Decoding to French text
 
-- Preparing new English text
-- Encoding input
-- Model prediction
-- Decoding to French text
-
-Everything is explained clearly with comments, diagrams, and examples to make the concepts beginner-friendly.
+> Everything is explained clearly with comments, diagrams, and examples to make the concepts beginner-friendly.
 
 ## Network Architecture 
 After tokenizing the text and make all pre-processes to it we pass it to a ```Word Embedding``` layer then to 2 ```Bidirectional LSTM``` with 256 units then ```TimeDistributed``` layer with a ```softmax``` activation function to produce probability distribution.
-![](https://i.ibb.co/0sKYNHt/Screen-Shot-2020-06-20-at-5-48-59-PM.png)
+
+<img src="https://i.ibb.co/0sKYNHt/Screen-Shot-2020-06-20-at-5-48-59-PM.png" 
+     alt="Machine Translation." 
+     style="width: 850px; height: auto; border: 5px solid black; border-radius: 6px;">
 
 
 
@@ -121,7 +123,7 @@ def model_final(input_shape, output_sequence_length, english_vocab_size, french_
 
 ## Author
 
-## **Musa Qureshi**
+### **Musa Qureshi**
 - [**Github**](https://github.com/Musa-Qureshi-01)
 - [**LinkedIn**](https://www.linkedin.com/in/musaqureshi)
 - [**X (Twitter)**](https://x.com/Musa_Qureshi_01)
