@@ -1,8 +1,10 @@
 # Machine Translation
-This repository contains an end-to-end Neural Machine Translation system that takes English text as input and returns the French translation. The project demonstrates the full pipeline including preprocessing, vocabulary creation, model building, and evaluation using a Seq2Seq architecture with Bidirectional LSTMs.
+This repository contains an end-to-end Neural Machine Translation system that takes English text as input and returns the French translation. The project demonstrates the full pipeline, including preprocessing, vocabulary creation, model building, and evaluation using a Seq2Seq architecture with Bidirectional LSTMs.
 
+<img src="https://www.dynamiclanguage.com/wp-content/uploads/2019/03/blog-heading-1.png" 
+     alt="Machine Translation." 
+     style="width: 750px; height: auto; border: 5px solid black; border-radius: 6px;">
 
-![Machine Translation](https://www.dynamiclanguage.com/wp-content/uploads/2019/03/blog-heading-1.png)
 
 ## Content 
 - [Machine Translation](#machine-translation)
@@ -10,19 +12,19 @@ This repository contains an end-to-end Neural Machine Translation system that ta
   - [Description](#description)
   - [Dataset](#dataset)
   - [Install Prerequisites](#install-prerequisites)
-  - [Notebook Explainations](#)
+  - [Notebook Explainations](#Notebook-Explanation)
   - [Network Architecture](#network-architecture)
   - [Final Model Code](#final-model-code)
   - [Authors](#authors)
   - [Contributing](#contributing)
 
 ## Description
-This project takes any english text and converts it to sequences of integers based on a big enough french and english vocabularies and pass it to a model that returns a probability distribution over possible translations with accuracy > 97%.
+This project takes any English text and converts it to sequences of integers based on a big enough French and english vocabularies and passes it to a model that returns a probability distribution over possible translations with accuracy > 97%.
 
 
 
 ## Dataset
-In this project we will be using [WMT](http://www.statmt.org/), The most common datasets used for machine translation.
+In this project, we will be using [WMT](http://www.statmt.org/), The most common datasets used for machine translation.
 
 
 ## Install Prerequisites
@@ -32,7 +34,41 @@ This project requires **Python 3** and the following Python libraries installed:
 - [TensorFlow](https://www.tensorflow.org) 1.x
 - [Keras](https://keras.io) 2.x
 
+## Notebook Explanation
+The notebook included in this repository is very detailed and covers:
 
+### Data Cleaning & Preprocessing
+- Lowercasing text
+- Removing punctuation
+- Tokenization for English & French
+- Creating word-to-index and index-to-word mappings
+- Padding sequences
+
+### Vocabulary Construction
+- Counting unique words
+- Building integer encodings
+- Preparing input/output pairs
+
+### Model Development
+- Explanation of embedding-based Seq2Seq
+- Why Bidirectional LSTMs are used
+- Visualization of sequence flow
+- Step-by-step model summary
+
+### Training & Evaluation
+- Loss curves
+- Accuracy curves
+- Sample translations
+- Error analysis
+
+### Inference Pipeline
+
+- Preparing new English text
+- Encoding input
+- Model prediction
+- Decoding to French text
+
+Everything is explained clearly with comments, diagrams, and examples to make the concepts beginner-friendly.
 
 ## Network Architecture 
 After tokenizing the text and make all pre-processes to it we pass it to a ```Word Embedding``` layer then to 2 ```Bidirectional LSTM``` with 256 units then ```TimeDistributed``` layer with a ```softmax``` activation function to produce probability distribution.
@@ -83,9 +119,13 @@ def model_final(input_shape, output_sequence_length, english_vocab_size, french_
 ```
 > you can find all model trials in the notebook
 
-## Authors
+## Author
 
-- **Musa Qureshi** - [**Github**](https://github.com/Musa-Qureshi-01)
+- **Musa Qureshi**
+- [**Github**](https://github.com/Musa-Qureshi-01)
+- [**LinkedIn**](https://www.linkedin.com/in/musaqureshi)
+- [**X (Twitter)**](https://x.com/Musa_Qureshi_01)
+  
 
 
 ## Contributing
