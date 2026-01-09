@@ -1,5 +1,5 @@
 # Machine Translation
-This project is a part of an end-to-end machine translation pipeline that will accept English text as input and return the French translation.
+This repository contains an end-to-end Neural Machine Translation system that takes English text as input and returns the French translation. The project demonstrates the full pipeline including preprocessing, vocabulary creation, model building, and evaluation using a Seq2Seq architecture with Bidirectional LSTMs.
 
 
 ![Machine Translation](https://www.dynamiclanguage.com/wp-content/uploads/2019/03/blog-heading-1.png)
@@ -10,6 +10,7 @@ This project is a part of an end-to-end machine translation pipeline that will a
   - [Description](#description)
   - [Dataset](#dataset)
   - [Install Prerequisites](#install-prerequisites)
+  - [Notebook Explainations](#)
   - [Network Architecture](#network-architecture)
   - [Final Model Code](#final-model-code)
   - [Authors](#authors)
@@ -30,6 +31,8 @@ This project requires **Python 3** and the following Python libraries installed:
 - [NumPy](http://www.numpy.org/)
 - [TensorFlow](https://www.tensorflow.org) 1.x
 - [Keras](https://keras.io) 2.x
+
+
 
 ## Network Architecture 
 After tokenizing the text and make all pre-processes to it we pass it to a ```Word Embedding``` layer then to 2 ```Bidirectional LSTM``` with 256 units then ```TimeDistributed``` layer with a ```softmax``` activation function to produce probability distribution.
